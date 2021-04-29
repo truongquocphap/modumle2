@@ -1,4 +1,4 @@
-package Bai_02_VongLap_ThucHanh;
+package Bai_02_VongLap.thu_hanh;
 
 import java.util.Scanner;
 

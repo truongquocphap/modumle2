@@ -1,9 +1,9 @@
-package bai_01_baiTap;
+package bai_01.bai_tap;
 
 import java.util.Scanner;
 
 public class DocSoThanhChu {
-    public static String tu1Den19(int so) {
+    public static String tu1Den9(int so) {
         String hienThi = "";
         switch (so) {
             case 1:
@@ -33,34 +33,40 @@ public class DocSoThanhChu {
             case 9:
                 hienThi = "nine";
                 break;
-            case 10:
+        }
+        return hienThi;
+    }
+
+    public static String tu10Den19(int so) {
+        String hienThi = "";
+        switch (so) {
+            case 0:
                 hienThi = "ten";
-                break;
-            case 11:
+            case 1:
                 hienThi = "eleven";
                 break;
-            case 12:
+            case 2:
                 hienThi = "twelve";
                 break;
-            case 13:
+            case 3:
                 hienThi = "thirteen";
                 break;
-            case 14:
+            case 4:
                 hienThi = "fourteen";
                 break;
-            case 15:
+            case 5:
                 hienThi = "fifteen";
                 break;
-            case 16:
+            case 6:
                 hienThi = "sixteen";
                 break;
-            case 17:
+            case 7:
                 hienThi = "seventeen";
                 break;
-            case 18:
+            case 8:
                 hienThi = "eighteen";
                 break;
-            case 19:
+            case 9:
                 hienThi = "nineteen";
                 break;
 
@@ -68,9 +74,12 @@ public class DocSoThanhChu {
         return hienThi;
     }
 
-    public static String tu20Den90(int so) {
+    public static String tu10Den90(int so) {
         String hienThi = "";
         switch (so) {
+            case 1:
+                hienThi = "ten";
+                break;
             case 2:
                 hienThi = "twenty";
                 break;
@@ -99,37 +108,37 @@ public class DocSoThanhChu {
         return hienThi;
 
     }
-    public static String tu100den900(int so){
-        String hienThi="";
-        switch (so){
+
+    public static String tu100den900(int so) {
+        String hienThi = "";
+        switch (so) {
             case 1:
-                hienThi="one hundred";
+                hienThi = "one hundred";
                 break;
             case 2:
-                hienThi="two hundred";
+                hienThi = "two hundred";
                 break;
             case 3:
-                hienThi="three hundred";
+                hienThi = "three hundred";
                 break;
             case 4:
-                hienThi="four hundred";
+                hienThi = "four hundred";
                 break;
             case 5:
-                hienThi="fif hundred";
+                hienThi = "fif hundred";
                 break;
             case 6:
-                hienThi="six hundred";
+                hienThi = "six hundred";
                 break;
             case 7:
-                hienThi="seven hundred";
+                hienThi = "seven hundred";
                 break;
             case 8:
-                hienThi="eight hundred";
+                hienThi = "eight hundred";
                 break;
             case 9:
-                hienThi="nine hundred";
+                hienThi = "nine hundred";
                 break;
-
         }
         return hienThi;
     }
@@ -138,27 +147,34 @@ public class DocSoThanhChu {
         System.out.println("nhap so can doc");
         Scanner scanner = new Scanner(System.in);
         int chuSo = scanner.nextInt();
-        int soChiaHetCho10=chuSo/10;
-        int chiaLayDu=chuSo%10;
-        int soChiaHetCho100=chuSo/100;
-        int soChiaHetCho110=chuSo/110;
+        int soChiaHetCho10 = chuSo / 10;
+        int chiaLayDu = chuSo % 10;
+        int soChiaHetCho100 = chuSo / 100;
+        int chiaLayDu100 = chuSo % 100;
+        int chiaLayDuCua100 = chiaLayDu100 / 10;
+        if (chuSo < 10) {
+            System.out.println(tu1Den9(chuSo));
+        } else if (chuSo <= 19) {
+            System.out.println(tu10Den19(chiaLayDu));
+        } else if (chuSo > 19 && chuSo <= 99) {
+            if (soChiaHetCho10 <= 9 && chiaLayDu >= 1) {
+                System.out.println(tu10Den90(soChiaHetCho10) + "-" + tu1Den9(chiaLayDu));
+            }
+        } else if (chuSo > 99 && chuSo < 1000) {
 
-        if (chuSo < 20) {
-            System.out.println(tu1Den19(chuSo));
-        }else if(soChiaHetCho100>=1 && soChiaHetCho110>=2 && chiaLayDu>=1){
-            System.out.println(tu100den900(soChiaHetCho100)+"-"+tu20Den90(soChiaHetCho110)+" and "+tu1Den19(chiaLayDu));
-        }
-        else if (soChiaHetCho100<=9 && soChiaHetCho110<=9){
-            System.out.println(tu100den900(soChiaHetCho100)+"-"+tu20Den90(soChiaHetCho110));
-        }
-        else if (soChiaHetCho10<=9 && chiaLayDu<=9){
-            System.out.println(tu20Den90(soChiaHetCho10)+"-"+tu1Den19(chiaLayDu));
-        }
-        else
-        if (soChiaHetCho10<=9) {
-            System.out.println(tu20Den90(soChiaHetCho10));
-        }else if (soChiaHetCho100<=9){
+            if (soChiaHetCho100 < 10 && chiaLayDuCua100 >= 1 && chiaLayDu >= 1 && soChiaHetCho10 > 11) {
+                System.out.println(tu100den900(soChiaHetCho100) + "-" + tu10Den90(chiaLayDuCua100) + " and " + tu1Den9(chiaLayDu));
+            } else if (soChiaHetCho100 < 10 && chiaLayDuCua100 >= 1 && chiaLayDu >= 1) {
+                System.out.println(tu100den900(soChiaHetCho100) + "  " + tu10Den19(chiaLayDu));
+            } else if (soChiaHetCho100 < 10 && chiaLayDuCua100 >= 1) {
+                System.out.println(tu100den900(soChiaHetCho100) + " " + tu10Den90(chiaLayDuCua100));
+            } else if (soChiaHetCho100 < 10 && chiaLayDu < 10) {
+                System.out.println(tu100den900(soChiaHetCho100) + " and " + tu1Den9(chiaLayDu));
+            }
+        } else if (soChiaHetCho100 <= 9) {
             System.out.println(tu100den900(soChiaHetCho100));
         }
     }
+
 }
+

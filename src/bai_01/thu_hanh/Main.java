@@ -1,4 +1,4 @@
-package bai_01_ThucHanh;
+package bai_01.thu_hanh;
 
 import java.util.function.DoubleToIntFunction;
 
