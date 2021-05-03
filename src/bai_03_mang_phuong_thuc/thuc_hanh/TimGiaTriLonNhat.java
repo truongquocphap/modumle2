@@ -1,4 +1,4 @@
-package bai_03_vonglap_phuongthuc.thuchanh;
+package bai_03_mang_phuong_thuc.thuc_hanh;
 
 import java.lang.reflect.Array;
 import java.util.Scanner;

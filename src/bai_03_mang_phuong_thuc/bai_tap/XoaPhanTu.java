@@ -1,4 +1,4 @@
-package bai_03_vonglap_phuongthuc.baitap;
+package bai_03_mang_phuong_thuc.bai_tap;
 
 import java.util.Scanner;
 
@@ -12,7 +12,6 @@ public class XoaPhanTu {
                 }
             }
         }
-        arr[arr.length-1]=0;
         return arr;
     }
     public static void main(String[] args) {
@@ -26,7 +25,7 @@ public class XoaPhanTu {
         int num=scanner.nextInt();
         System.out.println("phan tu sau khi xoa la: ");
         int[] new_arr=arr(arr,num);
-        for (int i = 0; i <new_arr.length ; i++) {
+        for (int i = 0; i <new_arr.length-1 ; i++) {
             System.out.println(new_arr[i]+"\t");
         }
     }
