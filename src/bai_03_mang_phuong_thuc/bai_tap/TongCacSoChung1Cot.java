@@ -2,7 +2,7 @@ package bai_03_mang_phuong_thuc.bai_tap;
 
 import java.util.Scanner;
 
-public class TongCacSoChng1Cot {
+public class TongCacSoChung1Cot {
     public static void main(String[] args) {
         Scanner scanner=new Scanner(System.in);
         System.out.println("nhap so hang cua mang");
