@@ -57,6 +57,13 @@ public class MayQuat {
 
     }
 
+    public MayQuat(int tocDo, boolean trangThai, double banKinh, String mauQuat) {
+        this.tocDo = tocDo;
+        this.trangThai = trangThai;
+        this.banKinh = banKinh;
+        this.mauQuat = mauQuat;
+    }
+
     public void trangThaiBat() {
         trangThai = true;
     }
