@@ -25,10 +25,10 @@ public class Circle {
 //        }
 //    }
 }
- class TestCircle{
-    public static void main(String[] args) {
-       Circle circle = new Circle(3.2);
-       circle.getRadius();
-       circle.getArea();
-    }
-}
+// class TestCircle{
+//    public static void main(String[] args) {
+//       Circle circle = new Circle(3.2);
+//       circle.getRadius();
+//       circle.getArea();
+//    }
+//}

@@ -1,24 +1,32 @@
 package bai4_oop_object.bai_tap;
 
 public class MayQuat {
-    private static final int cham = 1;
-    private static final int trungBinh = 2;
-    private static final int nhanh = 3;
+    private static final int CHAM = 1;
+    private static final int TRUNG_BINH = 2;
+    private static final int NHANH = 3;
     private int tocDo = 1;
     private boolean trangThai = false;
     private double banKinh = 5;
     private String mauQuat = "blue";
+    public MayQuat() {
 
+    }
+    public MayQuat(int tocDo, boolean trangThai, double banKinh, String mauQuat) {
+        this.tocDo = tocDo;
+        this.trangThai = trangThai;
+        this.banKinh = banKinh;
+        this.mauQuat = mauQuat;
+    }
     public static int getCham() {
-        return cham;
+        return CHAM;
     }
 
     public static int getTrungBinh() {
-        return trungBinh;
+        return TRUNG_BINH;
     }
 
     public static int getNhanh() {
-        return nhanh;
+        return NHANH;
     }
 
     public int getTocDo() {
@@ -53,17 +61,6 @@ public class MayQuat {
         this.mauQuat = mauQuat;
     }
 
-    public MayQuat() {
-
-    }
-
-    public MayQuat(int tocDo, boolean trangThai, double banKinh, String mauQuat) {
-        this.tocDo = tocDo;
-        this.trangThai = trangThai;
-        this.banKinh = banKinh;
-        this.mauQuat = mauQuat;
-    }
-
     public void trangThaiBat() {
         trangThai = true;
     }
@@ -71,20 +68,22 @@ public class MayQuat {
     public void trangThaiTat() {
         trangThai = false;
     }
-    public String mayQuattat(){
+
+    @Override
+    public String toString() {
+        if (this.trangThai==true){
+            return "MayQuat{" +
+                    "tocDo=" + tocDo +
+                    ", hoatDong=" + trangThai +
+                    ", banKinh=" + banKinh +
+                    ", mauQuat='" + mauQuat + '\'' +
+                    '}';
+        }
+
         return "Máy Quạt{"+
                 ", mauQuat: "+mauQuat+
                 ", banKinh: "+banKinh+
                 ", máy quạt đang tắt }\n";
-    }
-    @Override
-    public String toString() {
-        return "MayQuat{" +
-                "tocDo=" + tocDo +
-                ", hoatDong=" + trangThai +
-                ", banKinh=" + banKinh +
-                ", mauQuat='" + mauQuat + '\'' +
-                '}';
     }
 
     public static void main(String[] args) {
@@ -93,7 +92,7 @@ public class MayQuat {
         System.out.println(mayQuat1.toString());
         MayQuat mayQuat2=new MayQuat();
         mayQuat2.trangThaiTat();
-        System.out.println(mayQuat2.mayQuattat());
+        System.out.println(mayQuat2.toString());
         System.out.println("------thay doi gia tri--------");
         MayQuat mayQuat3=new MayQuat();
         mayQuat3.setTocDo(3);
@@ -112,6 +111,6 @@ public class MayQuat {
         mayQuat4.getTocDo();
         mayQuat4.getBanKinh();
         mayQuat4.getMauQuat();
-        System.out.println(mayQuat4.mayQuattat());
+        System.out.println(mayQuat4.toString());
     }
 }
