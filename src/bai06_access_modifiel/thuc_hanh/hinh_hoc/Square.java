@@ -20,6 +20,9 @@ public class Square extends Rectangle{
     public void setSide(double side) {
         this.side = side;
     }
+    public double getArea(){
+        return this.side*4;
+    }
 
     @Override
     public void setWidth(double width) {
@@ -35,7 +38,8 @@ public class Square extends Rectangle{
     public String toString() {
         return "Square ưith {" +
                 "side=" + getSide() +
-                ", which is a subclass of "
+                ", which is a subclass of "+
+                "area: "+getArea()
                 + super.toString()+
                 "}";
     }

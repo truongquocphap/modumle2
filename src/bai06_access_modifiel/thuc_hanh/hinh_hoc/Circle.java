@@ -37,6 +37,7 @@ public class Circle extends Shape {
         return "Circle{" +
                 "radius=" + getRadius() +
                 ", which is a subclass of '"  +
+                ", area: "+getArea()+
                super.toString()+
                 '}';
     }

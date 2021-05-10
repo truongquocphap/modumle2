@@ -9,6 +9,7 @@ public class TestPonit3D {
         System.out.println(point3D);
 
 
+
         point3D.setXYZ(3.4f,4.5f,6.7f);
         float arr[]=point3D.getXYZ();
         for (int i = 0; i < arr.length; i++) {

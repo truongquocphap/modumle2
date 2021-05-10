@@ -56,6 +56,7 @@ public class Rectangle extends Circle {
                 "width=" + getWidth() +
                 ", length=" + getLength() +
                 ", which is a subclass of "+
+                "area: "+getArea()+
                 super.toString()+
                 '}';
     }
