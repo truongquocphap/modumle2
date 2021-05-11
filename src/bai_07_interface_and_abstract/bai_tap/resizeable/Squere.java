@@ -12,11 +12,11 @@ public class Squere extends Square implements Resizeable {
     //    }
     @Override
     public void resize(double percent) {
-        System.out.println(this.getSide()*percent);
+        System.out.println("Square of area: "+super.getArea()*percent);
     }
 
     @Override
     public void Area() {
-        System.out.println(this.getArea());
+        System.out.println("Square of area: "+this.getArea());
     }
 }
