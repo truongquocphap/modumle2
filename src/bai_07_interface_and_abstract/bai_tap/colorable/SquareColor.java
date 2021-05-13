@@ -1,6 +1,6 @@
 package bai_07_interface_and_abstract.bai_tap.colorable;
 
-import bai06_access_modifiel.thuc_hanh.hinh_hoc.Square;
+import bai06_inheritanc.thuc_hanh.hinh_hoc.Square;
 
 public class SquareColor extends Square implements ColorAble {
     @Override

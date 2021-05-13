@@ -1,8 +1,6 @@
 package bai_7_abstract_and_interface.thuc_hanh.interface_comparable;
 
-import bai06_access_modifiel.bai_tap.Circle.Circle;
-
-import java.util.Comparator;
+import bai06_inheritanc.bai_tap.circle.Circle;
 
 public class ComparableCricle extends Circle implements Comparable<ComparableCricle> {
 

@@ -1,6 +1,6 @@
 package bai_7_abstract_and_interface.thuc_hanh.comparator;
 
-import bai06_access_modifiel.thuc_hanh.hinh_hoc.Circle;
+import bai06_inheritanc.thuc_hanh.hinh_hoc.Circle;
 
 import java.util.Comparator;
 
