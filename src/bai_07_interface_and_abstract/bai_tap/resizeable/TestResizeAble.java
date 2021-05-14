@@ -22,7 +22,7 @@ public class TestResizeAble {
         System.out.println("kích thước diện tích ban đầu là: ");
         for (Resizeable list:resizeableList
              ) {
-            list.Area();
+            list.area();
         }
 
 

@@ -14,11 +14,12 @@ public class Rectangel extends Rectangle implements Resizeable {
 //    }
     @Override
     public void resize(double percent) {
-        System.out.println("rectangle of area: "+super.getPerimeter()*percent);
+       this.setLength1(this.getLength()*Math.sqrt(1+percent/100)*(this.getLength()/this.getWidth()));
+        System.out.println("rectangle of area: "+this.getLength());
     }
 
     @Override
-    public void Area() {
+    public void area() {
         System.out.println("rectangle of area: "+this.getArea());
     }
 }

@@ -12,11 +12,12 @@ public class CircleResize extends Circle implements Resizeable {
 //        }
     @Override
     public void resize(double percent) {
-        System.out.println("Cỉcle area: "+super.getArea()*percent);
+        this.setRadius(this.getRadius()*Math.sqrt(1+percent/100));
+        System.out.println("Cỉcle area: "+this.getRadius());
     }
 
     @Override
-    public void Area() {
+    public void area() {
         System.out.println("Cỉcle area: " +this.getArea());
     }
 }
