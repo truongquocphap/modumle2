@@ -9,29 +9,29 @@ public class DeploymentQueue {
             this.next=null;
         }
     }
-    private Node head;
-    private Node tail;
+    private Node front;
+    private Node rear;
     public DeploymentQueue(){
-        this.head=null;
-        this.tail=null;
+        this.front =null;
+        this.rear =null;
     }
     public void enqueue(int key){
         Node temp = new Node(key);
-        if (this.tail==null){
-            this.head=this.tail=temp;
+        if (this.rear ==null){
+            this.front =this.rear =temp;
             return;
         }
-        this.tail.next=temp;
-        this.tail=temp;
+        this.rear.next=temp;
+        this.rear =temp;
     }
     public Node dequeue(){
-        if (this.head==null){
+        if (this.front ==null){
             return null;
         }
-        Node temp=this.head;
-        this.head=this.head.next;
-        if (this.head==null){
-            this.tail=null;
+        Node temp=this.front;
+        this.front =this.front.next;
+        if (this.front ==null){
+            this.rear =null;
         }
         return temp;
     }
