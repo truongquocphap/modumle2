@@ -1,4 +1,4 @@
-package bai_12_collection_framework.thuhanh;
+package bai_12_collection_framework.thuchanh;
 
 import java.util.HashMap;
 import java.util.LinkedHashMap;

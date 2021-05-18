@@ -1,14 +1,14 @@
-package bai_12_collection_framework.thuhanh;
+package bai_12_collection_framework.thuchanh;
 
-public class HashSetAndHashMap {
+public class Student {
     private String name;
     private int age;
     private String address;
 
-    public HashSetAndHashMap() {
+    public Student() {
     }
 
-    public HashSetAndHashMap(String name, int age, String address) {
+    public Student(String name, int age, String address) {
         this.name = name;
         this.age = age;
         this.address = address;
