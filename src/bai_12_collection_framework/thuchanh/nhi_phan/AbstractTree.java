@@ -1,4 +1,5 @@
 package bai_12_collection_framework.thuchanh.nhi_phan;
 
-public class AbstractTree {
+abstract class AbstractTree<E> implements Tree<E> {
+
 }
