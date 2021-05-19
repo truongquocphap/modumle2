@@ -25,7 +25,7 @@ public class Palindrome {
            temp2=queueStr.remove();
            if (temp1==temp2){
                if (count==string.length()/2){
-                   System.out.println(string+"la chuoi doi xung ");
+                   System.out.println(string+" la chuoi doi xung ");
                }
                    count++;
            }else {
