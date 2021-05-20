@@ -9,42 +9,25 @@ public class ChuoiLienTiep {
         String string = scanner.nextLine();
         LinkedList<Character> list = new LinkedList<>();
         LinkedList<Character> list1 = new LinkedList<>();
-        for (int i = 1; i < string.length(); i++) {
-            if (list.size() == 0) {
-                if (list.size() < list1.size()) {
-                    list.clear();
-                }
-               else if (string.charAt(i) > string.charAt(i - 1)) {
-                    list.add(string.charAt(i - 1));
-                    System.out.println(string.charAt(i - 1));
-
-                }
-            }
-            else
-                {
-
-                for (int j = i + 1; j < string.length(); j++) {
-
-                    if (string.charAt(j) > string.charAt(j - 1)) {
-                        list1.add(string.charAt(j - 1));
-                    } else if (list1.size() < list.size()) {
-                        list1.clear();
-                        i = j;
-                        break;
-                    }
-
-                }
-            }
+        char[] chars = string.toCharArray();
+        int[] compare = new int[string.length()];
+        int[] compare2 = new int[string.length()];
+        int a = 'd';
+        for (int i = 0; i < chars.length; i++) {
+            compare[i] = chars[i];
         }
-        System.out.println("chuoi lien tiep dai nhat la: ");
-        if (list.size() > list1.size()) {
-            for (Character showList : list) {
-                System.out.println(showList);
-            }
+//        int temp=compare[0];
+        compare2[0] = compare[0];
+        int count = 1;
+        System.out.println(compare[compare.length - 1]);
+        for (int i = 1; i < compare.length; i++) {
 
-        } else {
-            for (Character showList1 : list1) {
-                System.out.println(showList1);
+            if (compare[i] > compare2[i - 1]) {
+                compare2[count] = compare[i];
+                list.add((char) compare[i]);
+                count++;
+            }else {
+
             }
         }
     }
