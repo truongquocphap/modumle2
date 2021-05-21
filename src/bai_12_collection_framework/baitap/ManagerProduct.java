@@ -4,76 +4,8 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Scanner;
 
-public class ManagerProduct {
-    private static ArrayList<ManagerProduct> lists=new ArrayList<>();
-    private String tenSP;
-    private int id;
-    private int giaTien;
-    private String nhaSX;
-    private int count=1;
-
-
-    public ManagerProduct() {
-    }
-
-    public ManagerProduct(String tenSP, int id, int giaTien, String nhaSX) {
-        this.tenSP = tenSP;
-        this.id = id;
-        this.giaTien = giaTien;
-        this.nhaSX = nhaSX;
-
-    }
-
-    public String getTenSP() {
-        return tenSP;
-    }
-
-    public void setTenSP(String tenSP) {
-        this.tenSP = tenSP;
-    }
-
-    public int getId() {
-        return id;
-    }
-
-    public void setId(int id) {
-        this.id = id;
-    }
-
-    public int getGiaTien() {
-        return giaTien;
-    }
-
-    public void setGiaTien(int giaTien) {
-        this.giaTien = giaTien;
-    }
-
-    public String getNhaSX() {
-        return nhaSX;
-    }
-
-    public void setNhaSX(String nhaSX) {
-        this.nhaSX = nhaSX;
-    }
-
-    @Override
-    public String toString() {
-        return "QLSP_ArrayList{" +
-                "id='" + id + '\'' +
-                ", tenSP=" + tenSP +
-                ", giaTien=" + giaTien +
-                ", nhaSX='" + nhaSX + '\'' +
-                '}';
-    }
-    public void showSP(){
-        int count=1;
-        Collections.sort(lists,new ComparetorPrice());
-        for (ManagerProduct sanPham: lists) {
-            System.out.println(count+" : "+ sanPham.toString());
-            count++;
-        }
-
-    }
+public class ManagerProduct extends Product{
+    private static ArrayList<Product> lists=new ArrayList<>();
     public  void addSP(){
         Scanner scanner=new Scanner(System.in);
 
@@ -102,7 +34,7 @@ public class ManagerProduct {
 
 
 
-        lists.add(new ManagerProduct(tenSP,idSP,giaTien,nhaSX));
+        lists.add(new Product(tenSP,idSP,giaTien,nhaSX));
     }
     public void repairSP() throws Exception {
         if (lists.size()==0){
@@ -123,10 +55,20 @@ public class ManagerProduct {
         }
         Scanner scanner=new Scanner(System.in);
         System.out.println("nhap id muon xoa");
-        int id=scanner.nextInt();
+        int id=Integer.parseInt(scanner.nextLine());
         for (int i = 0; i < lists.size(); i++) {
             if (lists.get(i).getId()==id){
-                lists.remove(lists.get(i));
+                System.out.println("bạn  có chắc muốn xoá " + id +" này không?"
+                +" 1: đồng ý."
+                +" 2: chưa muốn xoá.");
+                int check=Integer.parseInt(scanner.nextLine());
+                if(check==1){
+                    lists.remove(lists.get(i));
+                }else {
+                    System.out.println("id vua duoc nhap chua duoc xoa");
+                    return;
+                }
+
             }
         }
     }
@@ -141,5 +83,14 @@ public class ManagerProduct {
             }
         }
         System.out.println("ten ban vua nhap khong tim thay " + ten);
+    }
+    public void showSP(){
+        int count=1;
+        Collections.sort(lists,new ComparetorPrice());
+        for (Product sanPham: lists) {
+            System.out.println(count+" : "+ sanPham.toString());
+            count++;
+        }
+
     }
 }
