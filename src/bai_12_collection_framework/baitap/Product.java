@@ -2,9 +2,9 @@ package bai_12_collection_framework.baitap;
 
 import java.util.Scanner;
 
-public class TestQLSP {
+public class Product {
     public static void main(String[] args) throws Exception {
-        QLSP_ArrayList listSP=new QLSP_ArrayList();
+        ManagerProduct listSP=new ManagerProduct();
         Scanner scanner = new Scanner(System.in);
         System.out.println("chon menu");
         int num = -1;

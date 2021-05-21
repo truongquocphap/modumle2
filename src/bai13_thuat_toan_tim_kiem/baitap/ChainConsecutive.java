@@ -1,7 +1,7 @@
 package bai13_thuat_toan_tim_kiem.baitap;
 import java.util.LinkedList;
 import java.util.Scanner;
-public class ChuoiLienTiep3 {
+public class ChainConsecutive {
     public static void main(String[] args) {
         Scanner input = new Scanner(System.in);
         LinkedList<Character> max = new LinkedList<>();

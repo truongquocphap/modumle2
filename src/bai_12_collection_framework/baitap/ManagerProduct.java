@@ -1,14 +1,11 @@
 package bai_12_collection_framework.baitap;
 
-import bai_10_baitap.linkedlist.LinkedList;
-
 import java.util.ArrayList;
 import java.util.Collections;
-import java.util.List;
 import java.util.Scanner;
 
-public class QLSP_ArrayList {
-    private static ArrayList<QLSP_ArrayList> lists=new ArrayList<>();
+public class ManagerProduct {
+    private static ArrayList<ManagerProduct> lists=new ArrayList<>();
     private String tenSP;
     private int id;
     private int giaTien;
@@ -16,10 +13,10 @@ public class QLSP_ArrayList {
     private int count=1;
 
 
-    public QLSP_ArrayList() {
+    public ManagerProduct() {
     }
 
-    public QLSP_ArrayList(String tenSP, int id, int giaTien, String nhaSX) {
+    public ManagerProduct(String tenSP, int id, int giaTien, String nhaSX) {
         this.tenSP = tenSP;
         this.id = id;
         this.giaTien = giaTien;
@@ -70,8 +67,8 @@ public class QLSP_ArrayList {
     }
     public void showSP(){
         int count=1;
-        Collections.sort(lists,new ComparetorGiaTien());
-        for (QLSP_ArrayList sanPham: lists) {
+        Collections.sort(lists,new ComparetorPrice());
+        for (ManagerProduct sanPham: lists) {
             System.out.println(count+" : "+ sanPham.toString());
             count++;
         }
@@ -105,7 +102,7 @@ public class QLSP_ArrayList {
 
 
 
-        lists.add(new QLSP_ArrayList(tenSP,idSP,giaTien,nhaSX));
+        lists.add(new ManagerProduct(tenSP,idSP,giaTien,nhaSX));
     }
     public void repairSP() throws Exception {
         if (lists.size()==0){
