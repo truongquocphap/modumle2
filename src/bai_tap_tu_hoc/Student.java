@@ -1,19 +1,23 @@
-package bai_tap_tu_hoc.Comparable;
+package bai_tap_tu_hoc;
 
-public class Student implements Comparable<Student> {
+import java.io.Serializable;
+
+public class Student implements Serializable {
     private int id;
     private String name;
-    private  int age;
+    private int age;
     private String address;
+    private double gpa;
 
     public Student() {
     }
 
-    public Student(int id, String name, int age, String address) {
+    public Student(int id, String name, int age, String address, double gpa) {
         this.id = id;
         this.name = name;
         this.age = age;
         this.address = address;
+        this.gpa = gpa;
     }
 
     public int getId() {
@@ -48,6 +52,14 @@ public class Student implements Comparable<Student> {
         this.address = address;
     }
 
+    public double getGpa() {
+        return gpa;
+    }
+
+    public void setGpa(double gpa) {
+        this.gpa = gpa;
+    }
+
     @Override
     public String toString() {
         return "Student{" +
@@ -55,12 +67,8 @@ public class Student implements Comparable<Student> {
                 ", name='" + this.name + '\'' +
                 ", age=" + this.age +
                 ", address='" + this.address + '\'' +
+                ", gpa=" + this.gpa +
                 '}';
     }
 
-    @Override
-    public int compareTo(Student student) {
-//        so sanh name voi nhau.
-        return this.getName().compareTo(student.getName());
-    }
 }

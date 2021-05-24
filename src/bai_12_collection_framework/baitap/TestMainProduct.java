@@ -4,7 +4,7 @@ import java.util.Scanner;
 
 public class TestMainProduct {
     public static void main(String[] args) throws Exception {
-        ManagerProduct listSP=new ManagerProduct();
+        Managerstudent listSP=new Managerstudent();
         Scanner scanner = new Scanner(System.in);
         System.out.println("chon menu");
         int num = -1;

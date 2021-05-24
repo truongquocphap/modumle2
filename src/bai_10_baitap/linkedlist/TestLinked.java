@@ -1,7 +1,5 @@
 package bai_10_baitap.linkedlist;
 
-import bai_tap_tu_hoc.Studen;
-
 public class TestLinked {
     public static void main(String[] args) {
         class Student{

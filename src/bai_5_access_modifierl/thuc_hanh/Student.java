@@ -1,7 +1,5 @@
 package bai_5_access_modifierl.thuc_hanh;
 
-import bai_tap_tu_hoc.Studen;
-
 public class Student {
     private int rollno;
     private String name;
