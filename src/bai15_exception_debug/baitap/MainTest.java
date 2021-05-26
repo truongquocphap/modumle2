@@ -7,9 +7,9 @@ public class MainTest {
             Scanner scanner=new Scanner(System.in);
             System.out.println("nhap canh a: ");
             double edgeA=Double.parseDouble(scanner.nextLine());
-            System.out.println("nhap canh a: ");
+            System.out.println("nhap canh b: ");
             double edgeB=Double.parseDouble(scanner.nextLine());
-            System.out.println("nhap canh a: ");
+            System.out.println("nhap canh c: ");
             double edgeC=Double.parseDouble(scanner.nextLine());
             try {
                 IllegalTriangleException triangle=new IllegalTriangleException(edgeA,edgeB,edgeC);
