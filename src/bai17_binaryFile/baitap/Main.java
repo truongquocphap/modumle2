@@ -22,7 +22,8 @@ public class Main {
                     products.addProduct();
                     break;
                 case 2:
-                    System.out.println(products.readProduct());
+                    products.readProduct();
+
                     break;
                 case 0:
                     System.exit(0);
