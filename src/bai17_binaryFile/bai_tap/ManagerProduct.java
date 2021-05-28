@@ -6,7 +6,7 @@ import java.util.Arrays;
 import java.util.List;
 import java.util.Scanner;
 
-public class ManagerProduct {
+public class ManagerProduct{
     List<Product> products = new ArrayList<>();
     public void addProduct() throws IOException {
         Scanner scanner = new Scanner(System.in);
