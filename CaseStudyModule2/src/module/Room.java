@@ -39,4 +39,16 @@ private String dichVuMienPhiDiKem;
                 ", kieuThue='" + getKieuThue() + '\'' +
                 "dichVuMienPhiDiKem='" + dichVuMienPhiDiKem);
     }
+
+    @Override
+    public String showIndex() {
+        return "Room: "+
+                "id = '"+getId()+'\''+
+                "tenDichVu='" + getTenDichVu() + '\'' +
+                ", dienTichSuDung='" + getDienTichSuDung() + '\'' +
+                ", chiPhiThue='" + getChiPhiThue() + '\'' +
+                ", soLuongNguoiToiDa='" + getSoLuongNguoiToiDa() + '\'' +
+                ", kieuThue='" + getKieuThue() + '\'' +
+                "dichVuMienPhiDiKem='" + dichVuMienPhiDiKem;
+    }
 }

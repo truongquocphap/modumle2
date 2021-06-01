@@ -1,5 +1,9 @@
 package module;
 
+import common.ReadAndWrite;
+
+import java.util.List;
+
 public class Villa extends Services {
     private String tieuChuanPhong;
     private String moTaTienNghiKhac;
@@ -35,7 +39,23 @@ public class Villa extends Services {
 
     @Override
     public void showInfo() {
-        System.out.println("Villa{" +
+            System.out.println("Villa{" +
+                    "id = '"+ getId()+'\''+
+                    "tenDichVu='" + getTenDichVu() + '\'' +
+                    ", dienTichSuDung='" + getDienTichSuDung() + '\'' +
+                    ", chiPhiThue='" + getChiPhiThue() + '\'' +
+                    ", soLuongNguoiToiDa='" + getSoLuongNguoiToiDa() + '\'' +
+                    ", kieuThue='" + getKieuThue() + '\'' +
+                    "tieuChuanPhong='" + tieuChuanPhong + '\'' +
+                    ", moTaTienNghiKhac='" + moTaTienNghiKhac + '\'' +
+                    ", dienTichHoBoi='" + dienTichHoBoi + '\'' +
+                    ", soTang='" + soTang + '\'' +
+                    '}');
+    }
+
+    @Override
+    public String showIndex() {
+        return "Villa{" +
                 "id = '"+ getId()+'\''+
                 "tenDichVu='" + getTenDichVu() + '\'' +
                 ", dienTichSuDung='" + getDienTichSuDung() + '\'' +
@@ -46,6 +66,6 @@ public class Villa extends Services {
                 ", moTaTienNghiKhac='" + moTaTienNghiKhac + '\'' +
                 ", dienTichHoBoi='" + dienTichHoBoi + '\'' +
                 ", soTang='" + soTang + '\'' +
-                '}');
+                '}';
     }
 }

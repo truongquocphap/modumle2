@@ -1,10 +1,6 @@
 package common;
 
-import module.House;
-import module.Room;
-
-import module.Services;
-import module.Villa;
+import module.*;
 
 import java.io.*;
 import java.util.ArrayList;
@@ -173,5 +169,161 @@ public class ReadAndWrite {
             }
         }
         return villasRoom;
+    }
+    public static void fileWriterCustomer(String fileCustomer, boolean trangThai, List<Customer> customerList){
+        File file=null;
+        FileWriter fileWriter=null;
+        BufferedWriter bufferedWriter=null;
+        try{
+            file=new File(PATH+fileCustomer);
+            if(!file.exists()){
+                file.createNewFile();
+            }
+            fileWriter=new FileWriter(file,trangThai);
+            bufferedWriter=new BufferedWriter(fileWriter);
+            for (Customer customer: customerList)
+                bufferedWriter.write(customer.toString());
+            bufferedWriter.newLine();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }finally {
+            try{
+                bufferedWriter.close();
+                fileWriter.close();
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+        }
+    }
+    public static List<Customer> readFileCustomer(String fileCustomer){
+        File file=null;
+        FileReader fileReader=null;
+        BufferedReader bufferedReader=null;
+        List<Customer> customerList=new ArrayList<>();
+        String[] strings=null;
+        try {
+            file=new File(PATH+fileCustomer);
+            fileReader=new FileReader(file);
+            bufferedReader=new BufferedReader(fileReader);
+            String line=null;
+            while ((line=bufferedReader.readLine())!=null){
+                strings=line.split(",");
+                Customer customer=new Customer(strings[0],strings[1],strings[2],strings[3],strings[4],strings[5],strings[6],strings[7]);
+                customerList.add(customer);
+            }
+        } catch (IOException e) {
+            e.printStackTrace();
+        }finally {
+            try {
+                bufferedReader.close();
+                fileReader.close();
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+        }
+        return customerList;
+    }
+    public static void fileWriterBooking(String fileBooking, boolean trangThai, String  id){
+        File file=null;
+        FileWriter fileWriter=null;
+        BufferedWriter bufferedWriter=null;
+        try{
+            file=new File(PATH+fileBooking);
+            if(!file.exists()){
+                file.createNewFile();
+            }
+            fileWriter=new FileWriter(file,trangThai);
+            bufferedWriter=new BufferedWriter(fileWriter);
+                bufferedWriter.write(id);
+            bufferedWriter.newLine();
+            bufferedWriter.flush();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }finally {
+            try{
+                bufferedWriter.close();
+                fileWriter.close();
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+        }
+    }
+    public static  void readFileBooking(String fileBooking){
+        File file=null;
+        FileReader fileReader=null;
+        BufferedReader bufferedReader=null;
+        try {
+            file=new File(PATH+fileBooking);
+            fileReader=new FileReader(file);
+            bufferedReader=new BufferedReader(fileReader);
+            String line=null;
+            while ((line=bufferedReader.readLine())!=null){
+                System.out.println(line);
+            }
+        } catch (IOException e) {
+            e.printStackTrace();
+        }finally {
+            try {
+                bufferedReader.close();
+                fileReader.close();
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+        }
+
+    }
+    public static void fileWriterEmployee(String fileemployee, boolean trangThai, List<Employee> employeeList){
+        File file=null;
+        FileWriter fileWriter=null;
+        BufferedWriter bufferedWriter=null;
+        try{
+            file=new File(PATH+fileemployee);
+            if(!file.exists()){
+                file.createNewFile();
+            }
+            fileWriter=new FileWriter(file,trangThai);
+            bufferedWriter=new BufferedWriter(fileWriter);
+            for (Employee em : employeeList)
+            bufferedWriter.write(em.toString());
+            bufferedWriter.newLine();
+            bufferedWriter.flush();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }finally {
+            try{
+                bufferedWriter.close();
+                fileWriter.close();
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+        }
+    }
+    public static List<Employee> readFileEmployee(String fileEmployee){
+        File file=null;
+        FileReader fileReader=null;
+        BufferedReader bufferedReader=null;
+        List<Employee> employeeList=new ArrayList<>();
+        String[] strings=null;
+        try {
+            file=new File(PATH+fileEmployee);
+            fileReader=new FileReader(file);
+            bufferedReader=new BufferedReader(fileReader);
+            String line=null;
+            while ((line=bufferedReader.readLine())!=null){
+                strings=line.split(",");
+                Employee employee=new Employee(strings[0],strings[1],strings[2]);
+                employeeList.add(employee);
+            }
+        } catch (IOException e) {
+            e.printStackTrace();
+        }finally {
+            try {
+                bufferedReader.close();
+                fileReader.close();
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+        }
+        return employeeList;
     }
 }

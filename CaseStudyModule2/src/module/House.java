@@ -1,5 +1,9 @@
 package module;
 
+import common.ReadAndWrite;
+
+import java.util.List;
+
 public class House extends Services {
     private String tieuChuanPhong;
     private String moTaTienNghiKhac;
@@ -66,5 +70,19 @@ public class House extends Services {
                 ", moTaTienNghiKhac='" + moTaTienNghiKhac + '\'' +
                 ", soTang='" + soTang
         );
+    }
+
+    @Override
+    public String showIndex() {
+        return "House: " +
+                "id = '"+getId()+'\''+
+                "tenDichVu='" + getTenDichVu() + '\'' +
+                ", dienTichSuDung='" + getDienTichSuDung() + '\'' +
+                ", chiPhiThue='" + getChiPhiThue() + '\'' +
+                ", soLuongNguoiToiDa='" + getSoLuongNguoiToiDa() + '\'' +
+                ", kieuThue='" + getKieuThue() + '\'' +
+                "tieuChuanPhong='" + tieuChuanPhong + '\'' +
+                ", moTaTienNghiKhac='" + moTaTienNghiKhac + '\'' +
+                ", soTang='" + soTang;
     }
 }

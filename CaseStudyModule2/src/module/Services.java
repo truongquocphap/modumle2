@@ -80,5 +80,6 @@ public abstract class Services {
     }
 
     public abstract void showInfo();
+    public abstract String showIndex();
 }
 
