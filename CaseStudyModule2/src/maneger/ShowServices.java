@@ -4,9 +4,9 @@ import common.ReadAndWrite;
 import module.House;
 import module.Room;
 import module.Villa;
-import sort.TreeSetHouse;
-import sort.TreeSetRoom;
-import sort.TreeSetVilla;
+import TreeSet.TreeSetHouse;
+import TreeSet.TreeSetRoom;
+import TreeSet.TreeSetVilla;
 
 import java.util.*;
 

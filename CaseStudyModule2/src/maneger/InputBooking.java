@@ -15,6 +15,7 @@ public class InputBooking {
     static Scanner scanner = new Scanner(System.in);
 
     public static void addNewBook() {
+        String luuThongTin="";
         while (true) {
             List<Customer> customerList = ReadAndWrite.readFileCustomer("customer.txt");
             for (int i = 0; i < customerList.size(); i++) {
@@ -23,7 +24,7 @@ public class InputBooking {
             System.out.println("mời bạn chọn tự tương ứng với tên của mình");
             int index = Integer.parseInt(scanner.nextLine());
             if (((index - 1) <= customerList.size())) {
-                ReadAndWrite.fileWriterBooking("booking.txt", true, "ten khach hang: " + customerList.get(index - 1).getName());
+               luuThongTin+= "ten khach hang: " + customerList.get(index - 1).getName();
                 break;
             }
             System.out.println("mời bạn nhập lại đúng với thứ tự trong danh sách");
@@ -46,7 +47,7 @@ public class InputBooking {
                         System.out.println("mời bạn chọn tự tương ứng với tên của mình");
                         int index = Integer.parseInt(scanner.nextLine());
                         if (((index - 1) <= villaList.size())) {
-                            ReadAndWrite.fileWriterBooking("booking.txt", true, "ID Servies: " + villaList.get(index - 1).getId());
+                            ReadAndWrite.fileWriterBooking("booking.txt", true, luuThongTin +"ID Servies: " + villaList.get(index - 1).getId());
                             break;
                         }
                         System.out.println("mời bạn nhập lại đúng với thứ tự trong danh sách");
@@ -62,7 +63,7 @@ public class InputBooking {
                         System.out.println("mời bạn chọn tự tương ứng với tên của mình");
                         int index = Integer.parseInt(scanner.nextLine());
                         if (((index - 1) <= houseList.size())) {
-                            ReadAndWrite.fileWriterBooking("booking.txt", true, "ID Servies: " + houseList.get(index - 1).getId());
+                            ReadAndWrite.fileWriterBooking("booking.txt", true, luuThongTin + "ID Servies: " + houseList.get(index - 1).getId());
                             break;
                         }
                         System.out.println("mời bạn nhập lại đúng với thứ tự trong danh sách");
@@ -78,7 +79,7 @@ public class InputBooking {
                         System.out.println("mời bạn chọn tự tương ứng với tên của mình");
                         int index = Integer.parseInt(scanner.nextLine());
                         if (((index-1)<= roomList.size())) {
-                            ReadAndWrite.fileWriterBooking("booking.txt", true, "ID Servies: " + roomList.get(index - 1).getId());
+                            ReadAndWrite.fileWriterBooking("booking.txt", true, luuThongTin + "ID Servies: " + roomList.get(index - 1).getId());
                             break;
                         }
                         System.out.println("mời bạn nhập lại đúng với thứ tự trong danh sách");
@@ -91,8 +92,5 @@ public class InputBooking {
                     System.exit(0);
             }
         }
-
-//            String IdCustomerAndIdServies="";
-//                IdCustomerAndIdServies+="tên của khách hàng là: "+InputMethodCustomer.addNewCustomer();
     }
 }

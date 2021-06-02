@@ -16,7 +16,8 @@ public class MainController {
                     "4. show information of customer\n" +
                     "5. add new booking\n" +
                     "6. Show information of Employee\n" +
-                    "7. exit");
+                    "7. Booking Ticket Movie \n" +
+                    "8. exit");
             String menu=scanner.nextLine();
             switch (menu){
                 case "1":
@@ -38,6 +39,9 @@ public class MainController {
                     ShowEmployee.inputEmployeeMap();
                     break;
                 case "7":
+                    BookingTicketMovie.bookingTicket();
+                    break;
+                case "8":
                    System.exit(0);
                 default:
                     System.out.println("mời nhập đúng theo danh sách đẫ cho");

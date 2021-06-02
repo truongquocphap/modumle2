@@ -272,12 +272,12 @@ public class ReadAndWrite {
         }
 
     }
-    public static void fileWriterEmployee(String fileemployee, boolean trangThai, List<Employee> employeeList){
+    public static void fileWriterEmployee(String fileEmployee, boolean trangThai, List<Employee> employeeList){
         File file=null;
         FileWriter fileWriter=null;
         BufferedWriter bufferedWriter=null;
         try{
-            file=new File(PATH+fileemployee);
+            file=new File(PATH+fileEmployee);
             if(!file.exists()){
                 file.createNewFile();
             }

@@ -62,16 +62,15 @@ public class RegularException extends Exception {
 
     //năm sinh
     public static void checkBirthday(String namSinh) throws RegularException {
-        String regexNamSinh = "^(((0[1-9]|[12][0-9]|3[01])[- /.](0[13578]|1[02])|(0[1-9]|[12][0-9]|30)[- /.]" +
-                "(0[469]|11)|(0[1-9]|1\\d|2[0-8])[- /.]02)[- /.]\\d{4}" +
-                "|29[- /.]02[- /.](\\d{2}(0[48]|[2468][048]|[13579][26])|([02468][04s8]|[1359][26])00))$";
+        String regexNamSinh = "(0[1-9]|[12][0-9]|3[01])/(0[1-9]|1[012])/(190[1-9]|19[1-9]\\d|2000|2001|2002)";
+
         if (!namSinh.matches(regexNamSinh)) {
             throw new RegularException("nhap sai dinh dang XX/XX/XXXX và  phải trên 18 tuổi");
         }
     }
-
+//(\d{2}(0[48]|[2468][048]|[13579][26])|([02468][04s8]|[1359][26])00))$
     public static void checkEmail(String email) throws RegularException {
-        String regexEmail = "^[_A-Za-z0-9-\\+]+(\\.[_A-Za-z0-9-]+)*@"
+        String regexEmail = "^[_A-Za-z0-9]+(\\.[_A-Za-z0-9-]+)*@"
                 + "[A-Za-z0-9-]+(\\.[A-Za-z0-9]+)*(\\.[A-Za-z]{2,})$";
         if (!email.matches(regexEmail)) {
             throw new RegularException("email nhập sai định dạng mời nhập lại theo định dạng abc@gmail.com (có thể thêm dấu . hoặc dấu _ ");
@@ -84,7 +83,7 @@ public class RegularException extends Exception {
             String gender = "";
             gender += tempGender[0].toUpperCase();
             for (int i = 1; i < tempGender.length; i++) {
-                gender += tempGender[i];
+                gender += tempGender[i].toLowerCase();
             }
             return gender;
         } else {
