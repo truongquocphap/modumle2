@@ -1,7 +1,8 @@
 package maneger;
 
 import controller.MainController;
-import regular_Exception.RegularException;
+import regular_Exception.RegulerException;
+import regular_Exception.Viladate;
 
 import java.util.Scanner;
 
@@ -15,9 +16,9 @@ public class InputPropetiesServies {
 
             try {
                 String idVilla = scanner.nextLine();
-                RegularException.checkIDVilla(idVilla);
+                Viladate.checkIDVilla(idVilla);
                 return idVilla;
-            } catch (RegularException e) {
+            } catch (RegulerException e) {
                 System.err.println(e.getMessage());
             }
         }
@@ -29,9 +30,9 @@ public class InputPropetiesServies {
         while (true) {
             try {
                 String idHouse = scanner.nextLine();
-                RegularException.checkIDHouse(idHouse);
+                Viladate.checkIDHouse(idHouse);
                 return idHouse;
-            } catch (RegularException e) {
+            } catch (RegulerException e) {
                 System.err.println(e.getMessage());
             }
         }
@@ -43,9 +44,9 @@ public class InputPropetiesServies {
         while (true) {
             try {
                 String idRoom = scanner.nextLine();
-                RegularException.checkIDRoom(idRoom);
+                Viladate.checkIDRoom(idRoom);
                 return idRoom;
-            } catch (RegularException e) {
+            } catch (RegulerException e) {
                 System.err.println(e.getMessage());
             }
         }
@@ -59,9 +60,9 @@ public class InputPropetiesServies {
 
             try {
                 String nameService = scanner.nextLine();
-                RegularException.checkName(nameService);
+                Viladate.checkName(nameService);
                 return nameService;
-            } catch (RegularException e) {
+            } catch (RegulerException e) {
                 System.err.println(e.getMessage());
             }
         }
@@ -73,9 +74,9 @@ public class InputPropetiesServies {
         while (true) {
             try {
                 String areaUse = scanner.nextLine();
-                RegularException.checkAreaPool(areaUse);
+                Viladate.checkAreaPool(areaUse);
                 return areaUse;
-            } catch (RegularException e) {
+            } catch (RegulerException e) {
                 System.err.println(e.getMessage());
             }
         }
@@ -88,9 +89,9 @@ public class InputPropetiesServies {
         while (true) {
             try {
                 String costsForRent = scanner.nextLine();
-                RegularException.checkPositiveNumber(costsForRent);
+                Viladate.checkPositiveNumber(costsForRent);
                 return costsForRent;
-            } catch (RegularException e) {
+            } catch (RegulerException e) {
                 System.err.println(e.getMessage());
             }
         }
@@ -102,9 +103,9 @@ public class InputPropetiesServies {
         while (true) {
             try {
                 String amountPeople = scanner.nextLine();
-                RegularException.checkAmountPeople(amountPeople);
+                Viladate.checkAmountPeople(amountPeople);
                 return amountPeople;
-            } catch (RegularException e) {
+            } catch (RegulerException e) {
                 System.err.println(e.getMessage());
             }
 
@@ -117,9 +118,9 @@ public class InputPropetiesServies {
         while (true) {
             try {
                 String floorNumber = scanner.nextLine();
-                RegularException.checkPositiveNumber(floorNumber);
+                Viladate.checkPositiveNumber(floorNumber);
                 return floorNumber;
-            } catch (RegularException e) {
+            } catch (RegulerException e) {
                 System.err.println(e.getMessage());
             }
         }
@@ -140,7 +141,7 @@ public class InputPropetiesServies {
             String kieuThue = scanner.nextLine();
             switch (kieuThue) {
                 case "1":
-                    System.out.println("nhập ngày muốn thuê ");
+                    System.out.println("nhập số ngày muốn thuê ");
                     while (true) {
                         try {
                             int nhapNgay = Integer.parseInt(scanner.nextLine());
@@ -236,9 +237,9 @@ public class InputPropetiesServies {
         while (true) {
             try {
                 String birthday = scanner.nextLine();
-                RegularException.checkBirthday(birthday);
+                Viladate.checkBirthday(birthday);
                 return birthday;
-            } catch (RegularException e) {
+            } catch (RegulerException e) {
                 System.err.println(e.getMessage());
             }
         }
@@ -249,9 +250,9 @@ public class InputPropetiesServies {
         while (true) {
             try {
                 String dienTichHoBoi = scanner.nextLine();
-                RegularException.checkAreaPool(dienTichHoBoi);
+                Viladate.checkAreaPool(dienTichHoBoi);
                 return dienTichHoBoi;
-            } catch (RegularException e) {
+            } catch (RegulerException e) {
                 System.err.println(e.getMessage());
             }
         }

@@ -1,7 +1,8 @@
 package maneger;
 
 import controller.MainController;
-import regular_Exception.RegularException;
+import regular_Exception.RegulerException;
+import regular_Exception.Viladate;
 
 import java.util.Scanner;
 
@@ -12,9 +13,9 @@ public class InputPropetiesCustomer {
        while (true){
            try {
                String name=scanner.nextLine();
-               RegularException.checkName(name);
+               Viladate.checkName(name);
                return name;
-           } catch (RegularException e) {
+           } catch (RegulerException e) {
                System.err.println(e.getMessage());
            }
        }
@@ -24,9 +25,9 @@ public class InputPropetiesCustomer {
         while (true){
             try {
                 String birthday=scanner.nextLine();
-                RegularException.checkBirthday(birthday);
+                Viladate.checkBirthday(birthday);
                 return birthday;
-            } catch (RegularException e) {
+            } catch (RegulerException e) {
                 System.err.println(e.getMessage());
             }
         }
@@ -37,9 +38,9 @@ public class InputPropetiesCustomer {
             try {
                 String gender=null;
                 String tempGender=scanner.nextLine();
-               gender = RegularException.checkGender(tempGender);
+               gender = Viladate.checkGender(tempGender);
                 return gender;
-            } catch (RegularException e) {
+            } catch (RegulerException e) {
                 System.err.println(e.getMessage());
             }
         }
@@ -49,9 +50,9 @@ public class InputPropetiesCustomer {
         while (true){
             try {
                 String idCart=scanner.nextLine();
-                RegularException.checkIdCart(idCart);
+                Viladate.checkIdCart(idCart);
                 return idCart;
-            } catch (RegularException e) {
+            } catch (RegulerException e) {
                 System.err.println(e.getMessage());
             }
         }
@@ -61,9 +62,9 @@ public class InputPropetiesCustomer {
         while (true){
             try {
                 String phoneNumber=scanner.nextLine();
-                RegularException.checkPhone(phoneNumber);
+                Viladate.checkPhone(phoneNumber);
                 return phoneNumber;
-            } catch (RegularException e) {
+            } catch (RegulerException e) {
                 System.err.println(e.getMessage());
             }
 
@@ -74,9 +75,9 @@ public class InputPropetiesCustomer {
         while (true){
             try {
                 String email=scanner.nextLine();
-                RegularException.checkEmail(email);
+                Viladate.checkEmail(email);
                 return email;
-            } catch (RegularException e) {
+            } catch (RegulerException e) {
                 System.err.println(e.getMessage());
             }
 
@@ -87,9 +88,9 @@ public class InputPropetiesCustomer {
         while (true){
             try {
                 String address=scanner.nextLine();
-                RegularException.checkName(address);
+                Viladate.checkName(address);
                 return address;
-            } catch (RegularException e) {
+            } catch (RegulerException e) {
                 System.err.println(e.getMessage());
             }
 

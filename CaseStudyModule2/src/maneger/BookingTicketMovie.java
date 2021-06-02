@@ -47,14 +47,15 @@ public class BookingTicketMovie {
                     }
                     break;
                 case "2":
-                    System.out.println(customerQueue.element());
+                    System.out.println(" tên hiện tại được mua là: "+customerQueue.element());
                     System.out.println("nếu đúng tên bạn thì mời bạn bấm yes rồi mua vé sai bấm no ");
                     String check=scanner.nextLine();
                     if (check.equalsIgnoreCase("yes")){
-                        System.out.println("mời bạn nhập số vé muốn mua và vé hôm nay cchỉ còn  "+(20-count));
+                        System.out.println("mời bạn nhập số vé muốn mua và vé hôm nay chỉ còn  " + (20-count));
                         int ticket=Integer.parseInt(scanner.nextLine());
-                        if (count>20){
-                            System.out.println("tổng số vé bán hôm nay đã hết mời bạn đến vào ngày mai");
+                        if (count>20 ||ticket>(20-count)){
+                            System.out.println("tổng số vé bán hôm nay đã hết hoặc không đủ số lượng bạn cần mua mời bạn đến vào ngày mai (*_*) \n cảm ơn quý khách đã dùng dịch vụ ");
+                            customerQueue.remove();
                         }else {
                             listTicket+=customerQueue.element()+" số vé bạn đã chọn là "+ticket+ " vé \n";
                             count+=ticket;

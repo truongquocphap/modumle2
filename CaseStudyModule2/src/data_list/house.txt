@@ -1,1 +1,10 @@
-zzz,xxx,ccc,vvv,bbb,nnn,'mmm,'jj
+HOVL-1111,Khong Khoa,30.0m2,300,20,3,***,'khong co nuoc,'5
+HOVL-1111,Ddd Khoa,30.0m2,300,20,3,***,'khong co nuoc,'5
+HOVL-1111,Khong4 Khoa,30.0m2,300,20,3,***,'khong co nuoc,'5
+HOVL-1111,Khong7 Khoa,30.0m2,300,20,3,***,'khong co nuoc,'5
+HOVL-1111,Khong9 Khoa,30.0m2,300,20,3,***,'khong co nuoc,'5
+HOVL-1111,Khong12 Khoa,30.0m2,300,20,3,***,'khong co nuoc,'5
+HOVL-1111,Khong1 Khoa,30.0m2,300,20,3,***,'khong co nuoc,'5
+HOVL-1111,Khong2 Khoa,30.0m2,300,20,3,***,'khong co nuoc,'5
+HOVL-1111,Khong2 Khoa,30.0m2,300,20,3,***,'khong co nuoc,'5
+HOVL-1111,Khong0 Khoa,30.0m2,300,20,3,***,'khong co nuoc,'5
